@@ -1,0 +1,10 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Sign-in complete</title></head>
+<body style="font-family:sans-serif;max-width:640px;margin:40px auto">
+<h1>Sign-in complete</h1>
+<p>Copy this page's full URL from the address bar and paste it into your Devin session.</p>
+<p id="s"></p>
+<script>
+const p=new URLSearchParams(location.search);
+document.getElementById('s').textContent=p.get('code')?'Code received.':('No code in URL. '+(p.get('error_description')||p.get('error')||''));
+</script>
+</body></html>
